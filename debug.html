@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Width Issue</title>
+    <style>
+        body {
+            background: #f9fafb;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .law-areas {
+            padding: 60px 0;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid red; /* Debug border */
+        }
+        
+        .law-area-section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            border: 2px solid blue; /* Debug border */
+        }
+        
+        .area-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 2.5rem;
+            cursor: pointer;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            border: 2px solid green; /* Debug border */
+        }
+        
+        .area-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #274F40;
+            margin: 0;
+        }
+        
+        .area-header p {
+            font-size: 1rem;
+            color: #4b5563;
+            margin: 0;
+        }
+        
+        .debug-info {
+            background: yellow;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <strong>Debug Info:</strong><br>
+        Container max-width: 1200px<br>
+        Container padding: 0 2rem<br>
+        Cards should all be 100% width
+    </div>
+    
+    <section class="law-areas">
+        <div class="container">
+            <div class="debug-info">
+                <strong>Container Debug:</strong><br>
+                This container should constrain all cards to the same width
+            </div>
+            
+            <!-- Card 1 -->
+            <div class="law-area-section">
+                <div class="area-header">
+                    <h2>Direito Civil</h2>
+                    <p>Fundamentos e princípios do direito privado português</p>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="law-area-section">
+                <div class="area-header">
+                    <h2>Direito Penal</h2>
+                    <p>Princípios e aplicação do direito penal português</p>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="law-area-section">
+                <div class="area-header">
+                    <h2>Direito Administrativo</h2>
+                    <p>Relações entre a Administração Pública e os cidadãos</p>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="law-area-section">
+                <div class="area-header">
+                    <h2>Direito Constitucional</h2>
+                    <p>Constituição da República Portuguesa e direitos fundamentais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Debug script to check actual computed styles
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.law-area-section');
+            console.log('Found', cards.length, 'cards');
+            
+            cards.forEach((card, index) => {
+                const computedStyle = window.getComputedStyle(card);
+                console.log(`Card ${index + 1}:`, {
+                    width: computedStyle.width,
+                    maxWidth: computedStyle.maxWidth,
+                    minWidth: computedStyle.minWidth,
+                    display: computedStyle.display,
+                    boxSizing: computedStyle.boxSizing
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

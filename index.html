@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://img.youtube.com; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
+    <title>Conversa Direito - Lisbon Law Podcast Educacional de Direito Português</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <img src="lisbon-law-logo.png" alt="Lisbon Law" class="nav-logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="episodes.html">Episódios</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#resources">Recursos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Conversa Direito</h1>
+                <p class="hero-subtitle">Lisbon Law - O seu podcast educacional sobre Direito Português</p>
+                <p class="hero-description">
+                    Explore os fundamentos do Direito Português através de episódios informativos 
+                    e acessíveis, criados para estudantes, académicos e professores.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Ouvir Agora
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-podcast"></i>
+                        Subscrever
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="podcast-card">
+                    <div class="podcast-cover">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="podcast-info">
+                        <h3>Episódio Atual</h3>
+                        <p>Introdução ao Direito Civil Português</p>
+                        <div class="video-link">
+                            <button class="btn btn-primary watch-video-btn" data-video-id="mCFMn0UkRt0">
+                                <i class="fas fa-play"></i>
+                                Ver Vídeo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episodes Section -->
+    <section id="episodes" class="episodes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Episódios Recentes</h2>
+                <p>Descubra os nossos episódios mais populares sobre Direito Português</p>
+            </div>
+            <form class="search-bar" id="episode-search-form" autocomplete="off">
+                <input type="text" id="episode-search-input" placeholder="Pesquisar episódios..." aria-label="Pesquisar episódios">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="episodes-grid">
+                <div class="episode-card">
+                    <div class="episode-image">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="episode-content">
+                        <span class="episode-number">Ep. 01</span>
+                        <h3>Fundamentos do Direito Português</h3>
+                        <p>Uma introdução aos princípios básicos e estrutura do sistema jurídico português.</p>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-clock"></i> 45 min</span>
+                            <span><i class="fas fa-calendar"></i> 15 Mar 2024</span>
+                        </div>
+                        <div class="video-thumbnail" data-video-id="w4r7HXq8K8E">
+                            <img src="https://img.youtube.com/vi/w4r7HXq8K8E/maxresdefault.jpg"
+                                 alt="Thumbnail"
+                                 onerror="this.src='https://img.youtube.com/vi/w4r7HXq8K8E/hqdefault.jpg'; this.onerror=function(){this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIyMCIgdmlld0JveD0iMCAwIDMyMCAyMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjIwIiBmaWxsPSIjMjA0MDQwIi8+Cjx0ZXh0IHg9IjE2MCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRUVBNDRBIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPkRpcmVpdG8gUG9ydHVndcOqcyA8L3RleHQ+Cjwvc3ZnPg==';}"
+                                 loading="lazy">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="episode-card">
+                    <div class="episode-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="episode-content">
+                        <span class="episode-number">Ep. 02</span>
+                        <h3>Direito Civil: Contratos</h3>
+                        <p>Análise detalhada dos contratos no Código Civil Português e suas implicações práticas.</p>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-clock"></i> 52 min</span>
+                            <span><i class="fas fa-calendar"></i> 22 Mar 2024</span>
+                        </div>
+                        <div class="video-thumbnail" data-video-id="w4r7HXq8K8E">
+                            <img src="https://img.youtube.com/vi/w4r7HXq8K8E/maxresdefault.jpg"
+                                 alt="Thumbnail"
+                                 onerror="this.src='https://img.youtube.com/vi/w4r7HXq8K8E/hqdefault.jpg'; this.onerror=function(){this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIyMCIgdmlld0JveD0iMCAwIDMyMCAyMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjIwIiBmaWxsPSIjMjA0MDQwIi8+Cjx0ZXh0IHg9IjE2MCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRUVBNDRBIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPkRpcmVpdG8gUG9ydHVndcOqcyA8L3RleHQ+Cjwvc3ZnPg==';}"
+                                 loading="lazy">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="episode-card">
+                    <div class="episode-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="episode-content">
+                        <span class="episode-number">Ep. 03</span>
+                        <h3>Direito Administrativo</h3>
+                        <p>Compreenda as relações entre a Administração Pública e os cidadãos.</p>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-clock"></i> 48 min</span>
+                            <span><i class="fas fa-calendar"></i> 29 Mar 2024</span>
+                        </div>
+                        <div class="video-thumbnail" data-video-id="w4r7HXq8K8E">
+                            <img src="https://img.youtube.com/vi/w4r7HXq8K8E/maxresdefault.jpg"
+                                 alt="Thumbnail"
+                                 onerror="this.src='https://img.youtube.com/vi/w4r7HXq8K8E/hqdefault.jpg'; this.onerror=function(){this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIyMCIgdmlld0JveD0iMCAwIDMyMCAyMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjIwIiBmaWxsPSIjMjA0MDQwIi8+Cjx0ZXh0IHg9IjE2MCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRUVBNDRBIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPkRpcmVpdG8gUG9ydHVndcOqcyA8L3RleHQ+Cjwvc3ZnPg==';}"
+                                 loading="lazy">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre o Podcast</h2>
+                    <p>
+                        O "Conversa Direito" da Lisbon Law nasceu da necessidade de tornar o Direito Português 
+                        mais acessível e compreensível para estudantes, académicos e professores. 
+                        Através de episódios informativos e bem estruturados, exploramos os 
+                        diversos ramos do Direito de forma clara e didática.
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Educativo</h4>
+                            <p>Conteúdo estruturado para facilitar a aprendizagem</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h4>Colaborativo</h4>
+                            <p>Participação de especialistas e académicos</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-book-open"></i>
+                            <h4>Atualizado</h4>
+                            <p>Informação sempre atual e relevante</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="stats-card">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Episódios</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10k+</h3>
+                            <p>Ouvintes</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4.8</h3>
+                            <p>Avaliação</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recursos Educativos</h2>
+                <p>Materiais complementares para aprofundar o seu conhecimento</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Guias de Estudo</h3>
+                    <p>Resumos e esquemas dos principais temas abordados nos episódios.</p>
+                    <button class="btn btn-outline">Aceder</button>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Vídeos Explicativos</h3>
+                    <p>Conteúdo visual complementar aos episódios do podcast.</p>
+                    <button class="btn btn-outline">Ver Vídeos</button>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>FAQ</h3>
+                    <p>Perguntas frequentes sobre Direito Português respondidas por especialistas.</p>
+                    <button class="btn btn-outline">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Entre em Contacto</h2>
+                    <p>Tem dúvidas, sugestões ou quer colaborar connosco? Entre em contacto!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@conversadireito.pt</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>+351 213 456 789</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Lisboa, Portugal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Conversa Direito</span>
+                        <span class="brand-subtitle">Lisbon Law</span>
+                    </div>
+                    <p>O seu podcast educacional sobre Direito Português, criado para estudantes, académicos e professores.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="episodes.html">Episódios</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#resources">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Guias de Estudo</a></li>
+                        <li><a href="#">Vídeos</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Bibliografia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscreva para receber as últimas novidades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu email">
+                        <button type="submit" class="btn btn-primary">Subscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Conversa Direito - Lisbon Law. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

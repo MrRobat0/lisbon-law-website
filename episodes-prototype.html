@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://img.youtube.com; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
+    <title>Episódios (Protótipo) - Conversa Direito - Lisbon Law</title>
+    <link rel="stylesheet" href="styles.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="prototype">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="lisbon-law-logo.png" alt="Lisbon Law" class="nav-logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="episodes.html">Episódios</a></li>
+                <li><a href="episodes-prototype.html" class="active">Episódios (Protótipo)</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#resources">Recursos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Episodes Header -->
+    <section class="episodes-header">
+        <div class="container">
+            <div class="episodes-header-content">
+                <h1>Episódios por Área de Direito <span style="font-size:0.55em; font-weight:600; background: rgba(255,255,255,0.2); padding: 0.2rem 0.6rem; border-radius: 8px; margin-left: 0.5rem;">Protótipo</span></h1>
+                <p>Explore o nosso conteúdo organizado por áreas de especialização jurídica</p>
+                <form class="search-bar" id="episode-search-form" autocomplete="off">
+                    <input type="text" id="episode-search-input" placeholder="Pesquisar episódios..." aria-label="Pesquisar episódios">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Law Areas Grid (rendered dynamically by script.js) -->
+    <section class="law-areas">
+        <div class="container">
+            <!-- Dynamic content will be injected here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Conversa Direito</span>
+                        <span class="brand-subtitle">Lisbon Law</span>
+                    </div>
+                    <p>O seu podcast educacional sobre Direito Português, criado para estudantes, académicos e professores.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="episodes-prototype.html">Episódios</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#resources">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Guias de Estudo</a></li>
+                        <li><a href="#">Vídeos</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Bibliografia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscreva para receber as últimas novidades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu email">
+                        <button type="submit" class="btn btn-primary">Subscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Conversa Direito - Lisbon Law. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
